@@ -8,8 +8,6 @@ interface ModalProps {
   onClose: () => void;
 }
 
-const modalRoot = document.body;
-
 const Modal = ({
   children,
   onClose,
@@ -52,7 +50,7 @@ const Modal = ({
     >
       <div className={css.modal}>{children}</div>
     </div>,
-    modalRoot,
+    document.body,
   );
 }
 
